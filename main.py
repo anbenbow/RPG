@@ -21,7 +21,7 @@ print_slow('MAY THE ODDS FOREVER BE IN YOUR FAVOR.')
 print('')
 print('')
 print_slow(f'{my_hero.hero['name']} is being attacked by {villain_one.villain_one['name']}!!')
-print_slow(f'Level: {villain_one.villain_one['level']} Health: {villain_one.villain_one ['health']}')
+print_slow(f'Level: {villain_one.villain_one['level']} Health: {villain_one.villain_one['health']}')
 print('')
 
 while villain_one.villian_one['health'] !=0:
@@ -49,16 +49,25 @@ while villain_one.villian_one['health'] !=0:
     print('')
     if user_attack == 0:
         print_slow(f'{my_hero.hero['name']} has attacked {villain_one.villain_one['name']} with {my_hero.hero['attacks'][0][0]} and caused {my_hero.hero['attacks'][0][1]} damage!!')
-        print_slow(f'{villain_one.villian_one['name']} has {my_hero.hero['attacks'][0][1] - villain_one.villain_one['health']} remaining.')
+        print_slow(f'{villain_one.villian_one['name']} has {villain_one.villain_one['health']-my_hero.hero['attacks'][0][1]} remaining.')
     if user_attack == 1:
         print_slow(f'{my_hero.hero['name']} has attacked {villain_one.villain_one['name']} with {my_hero.hero['attacks'][1][0]} and caused {my_hero.hero['attacks'][1][1]} damage!!')
-        print_slow(f'{villain_one.villian_one['name']} has {my_hero.hero['attacks'][1][1] - villain_one.villain_one['health']} remaining.')
+        print_slow(f'{villain_one.villian_one['name']} has {villain_one.villain_one['health']-my_hero.hero['attacks'][1][1]} remaining.')
     if user_attack == 2:
         print_slow(f'{my_hero.hero['name']} has attacked {villain_one.villain_one['name']} with {my_hero.hero['attacks'][2][0]} and caused {my_hero.hero['attacks'][2][1]} damage!!')
-        print_slow(f'{villain_one.villian_one['name']} has {my_hero.hero['attacks'][2][1] - villain_one.villain_one['health']} remaining.')
+        print_slow(f'{villain_one.villian_one['name']} has {villain_one.villain_one['health']-my_hero.hero['attacks'][2][1]} remaining.')
     if user_attack == 3:
         print_slow(f'{my_hero.hero['name']} has attacked {villain_one.villain_one['name']} with {my_hero.hero['attacks'][3][0]} and caused {my_hero.hero['attacks'][3][1]} damage!!')    
-        print_slow(f'{villain_one.villian_one['name']} has {my_hero.hero['attacks'][3][1] - villain_one.villain_one['health']} remaining.')
+        print_slow(f'{villain_one.villian_one['name']} has {villain_one.villain_one['health']-my_hero.hero['attacks'][3][1]} remaining.')
+    if user_attack == 4:
+        print_slow(f'{my_hero.hero['name']} has attacked {villain_one.villain_one['name']} with {my_hero.hero['attacks'][4][0]} and caused {my_hero.hero['attacks'][1][1]} damage!!')
+        print_slow(f'{villain_one.villian_one['name']} has {villain_one.villain_one['health']-my_hero.hero['attacks'][4][1]} remaining.')
+    if user_attack == 5:
+        print_slow(f'{my_hero.hero['name']} has attacked {villain_one.villain_one['name']} with {my_hero.hero['attacks'][5][0]} and caused {my_hero.hero['attacks'][2][1]} damage!!')
+        print_slow(f'{villain_one.villian_one['name']} has {villain_one.villain_one['health']-my_hero.hero['attacks'][5][1]} remaining.')
+    if user_attack == 6:
+        print_slow(f'{my_hero.hero['name']} has attacked {villain_one.villain_one['name']} with {my_hero.hero['attacks'][6][0]} and caused {my_hero.hero['attacks'][3][1]} damage!!')    
+        print_slow(f'{villain_one.villian_one['name']} has {villain_one.villain_one['health']-my_hero.hero['attacks'][6][1]} remaining.')
     if my_hero.hero['health'] ==0:
         print_slow(f'{my_hero.hero['name']} HAS BEEN DEFEATED BY {villain_one.villain_one['name']}!! GAME OVER!!!')
     if villain_one.villian_one['health'] ==0:
@@ -89,13 +98,17 @@ print('')
 print('')
 print('')
 print_slow(f'{my_hero.hero['name']} is being attacked by {villain_two.villain_two['name']}!!')
-print_slow(f'Level: {villain_one.villain_one['level']} Health: {villain_one.villain_one ['health']}')
+print_slow(f'Level: {villain_two.villain_two['level']} Health: {villain_two.villain_two['health']}')
 print('')
 
-while villain_one.villian_one['health'] !=0:
-    print_slow(f'{villain_one.villian_one['name']} HAS ATTACKED {my_hero.hero['name']} with ' + random {villain_one.villain_one['attacks'][]}'!!')
+while villain_two.villian_two['health'] !=0:
+    print_slow(f'{villain_two.villian_two['name']} HAS ATTACKED {my_hero.hero['name']} with ' + random {villain_two.villain_two['attacks'][]}'!!')
     print('')
-    print_slow(f'{my_hero.hero['name']} has {my_hero.hero['health']-villain_one.villain_one['attacks'][3][1]} remaining.')
+    print_slow('\033[1;31;40m'+ {villain_two.villian_two['name']}':' + random {villain_two.villain_two['challenges']})
+    print('')
+    print_slow(f'{my_hero.hero['name']} has {my_hero.hero['health']-villain_two.villain_two['attacks'][3][1]} remaining.')
+    print('')
+    print_slow('\033[1;35;40m'+ {my_hero.hero['name']}':' + random {my_hero.hero['pleas']})
     print('')
     print_slow('CHOOSE YOUR ATTACK:')
     print('')
@@ -109,32 +122,43 @@ while villain_one.villian_one['health'] !=0:
     print('')
     user_attack =input('SELECT YOUR ATTACK: ')
     
-    print_slow('\033[1;35;40m'+ random {my_hero.hero['challenges']})
+    print_slow('\033[1;35;40m'+ {my_hero.hero['name']}':' + random {my_hero.hero['challenges']})
     print('')
     if user_attack == 0:
-        print_slow(f'{my_hero.hero['name']} has attacked {villain_one.villain_one['name']} with {my_hero.hero['attacks'][0][0]} and caused {my_hero.hero['attacks'][0][1]} damage!!')
-        print_slow(f'{villain_one.villian_one['name']} has {my_hero.hero['attacks'][0][1] - villain_one.villain_one['health']} remaining.')
+        print_slow(f'{my_hero.hero['name']} has attacked {villain_two.villain_two['name']} with {my_hero.hero['attacks'][0][0]} and caused {my_hero.hero['attacks'][0][1]} damage!!')
+        print_slow(f'{villain_two.villian_two['name']} has {villain_two.villain_two['health']-my_hero.hero['attacks'][0][1]} remaining.')
     if user_attack == 1:
-        print_slow(f'{my_hero.hero['name']} has attacked {villain_one.villain_one['name']} with {my_hero.hero['attacks'][1][0]} and caused {my_hero.hero['attacks'][1][1]} damage!!')
-        print_slow(f'{villain_one.villian_one['name']} has {my_hero.hero['attacks'][1][1] - villain_one.villain_one['health']} remaining.')
+        print_slow(f'{my_hero.hero['name']} has attacked {villain_two.villain_two['name']} with {my_hero.hero['attacks'][1][0]} and caused {my_hero.hero['attacks'][1][1]} damage!!')
+        print_slow(f'{villain_two.villian_two['name']} has {villain_two.villain_two['health']-my_hero.hero['attacks'][1][1]} remaining.')
     if user_attack == 2:
-        print_slow(f'{my_hero.hero['name']} has attacked {villain_one.villain_one['name']} with {my_hero.hero['attacks'][2][0]} and caused {my_hero.hero['attacks'][2][1]} damage!!')
-        print_slow(f'{villain_one.villian_one['name']} has {my_hero.hero['attacks'][2][1] - villain_one.villain_one['health']} remaining.')
+        print_slow(f'{my_hero.hero['name']} has attacked {villain_two.villain_two['name']} with {my_hero.hero['attacks'][2][0]} and caused {my_hero.hero['attacks'][2][1]} damage!!')
+        print_slow(f'{villain_two.villian_two['name']} has {villain_two.villain_two['health']-my_hero.hero['attacks'][2][1]} remaining.')
     if user_attack == 3:
-        print_slow(f'{my_hero.hero['name']} has attacked {villain_one.villain_one['name']} with {my_hero.hero['attacks'][3][0]} and caused {my_hero.hero['attacks'][3][1]} damage!!')    
-        print_slow(f'{villain_one.villian_one['name']} has {my_hero.hero['attacks'][3][1] - villain_one.villain_one['health']} remaining.')
+        print_slow(f'{my_hero.hero['name']} has attacked {villain_two.villain_two['name']} with {my_hero.hero['attacks'][3][0]} and caused {my_hero.hero['attacks'][3][1]} damage!!')    
+        print_slow(f'{villain_two.villian_two['name']} has {villain_two.villain_two['health']-my_hero.hero['attacks'][3][1]} remaining.')
+    if user_attack == 4:
+        print_slow(f'{my_hero.hero['name']} has attacked {villain_two.villain_two['name']} with {my_hero.hero['attacks'][4][0]} and caused {my_hero.hero['attacks'][1][1]} damage!!')
+        print_slow(f'{villain_two.villian_two['name']} has {villain_two.villain_two['health']-my_hero.hero['attacks'][4][1]} remaining.')
+    if user_attack == 5:
+        print_slow(f'{my_hero.hero['name']} has attacked {villain_two.villain_two['name']} with {my_hero.hero['attacks'][5][0]} and caused {my_hero.hero['attacks'][2][1]} damage!!')
+        print_slow(f'{villain_two.villian_two['name']} has {villain_two.villain_two['health']-my_hero.hero['attacks'][5][1]} remaining.')
+    if user_attack == 6:
+        print_slow(f'{my_hero.hero['name']} has attacked {villain_two.villain_two['name']} with {my_hero.hero['attacks'][6][0]} and caused {my_hero.hero['attacks'][3][1]} damage!!')    
+        print_slow(f'{villain_two.villian_two['name']} has {villain_two.villain_two['health']-my_hero.hero['attacks'][6][1]} remaining.')
     if my_hero.hero['health'] ==0:
-        print_slow(f'{my_hero.hero['name']} HAS BEEN DEFEATED BY {villain_one.villain_one['name']}!! GAME OVER!!!')
-    if villain_one.villian_one['health'] ==0:
-        print_slow(f'{my_hero.hero['name']} HAS DEFEATED {villain_one.villain_one['name']}!! TIME TO LEVEL UP!')
+        print_slow(f'{my_hero.hero['name']} HAS BEEN DEFEATED BY {villain_two.villain_two['name']}!! GAME OVER!!!')
+    if villain_two.villian_two['health'] ==0:
+        print_slow('\033[1;31;40m'+ {villain_two.villian_two['name']}':' + random {villain_two.villain_two['pleas']})
         print('')
-        print_slow(f'\033[1;33;40m + Looted {villain_one.villian_one['coins']['copper']} copper coins!')
-        print_slow(f'\033[1;33;40m + Looted {villain_one.villian_one['coins']['silver']} silver coins!')
-        print_slow(f'\033[1;33;40m + Looted {villain_one.villian_one['coins']['gold']} gold coins!')
+        print_slow(f'{my_hero.hero['name']} HAS DEFEATED {villain_two.villain_two['name']}!! TIME TO LEVEL UP!')
         print('')
-        print_slow(f'{my_hero.hero['name']} now has {villain_one.villain_one['coins']['copper']+ my_hero.hero['coins']['copper']} copper, {villain_one.villain_one['coins']['silver']+ my_hero.hero['coins']['silver']} silver, and {villain_one.villain_one['coins']['gold']+ my_hero.hero['coins']['gold']} gold coins.')
+        print_slow(f'\033[1;33;40m + Looted {villain_two.villian_two['coins']['copper']} copper coins!')
+        print_slow(f'\033[1;33;40m + Looted {villain_two.villian_two['coins']['silver']} silver coins!')
+        print_slow(f'\033[1;33;40m + Looted {villain_two.villian_two['coins']['gold']} gold coins!')
         print('')
-        print_slow(f'\033[1;33;40m + Added {villain_one.villian_one['equipment']} equipment!')
+        print_slow(f'{my_hero.hero['name']} now has {villain_two.villain_two['coins']['copper']+ my_hero.hero['coins']['copper']} copper, {villain_two.villain_two['coins']['silver']+ my_hero.hero['coins']['silver']} silver, and {villain_two.villain_two['coins']['gold']+ my_hero.hero['coins']['gold']} gold coins.')
+        print('')
+        print_slow(f'\033[1;33;40m + Added {villain_two.villian_two['equipment']} equipment!')
         print('')
         print_slow(f'{my_hero.hero['name']} has leveled up to level {my_hero.hero['level']+1}!')
         print('')
@@ -146,6 +170,8 @@ while villain_one.villian_one['health'] !=0:
         my_converted_attack_tuple.append = user_new_attack, 100
         my_hero.hero['attacks'] = tuple(my_converted_attack_tuple)
         print('')
+print('')
+print('')
 print('')
 print('')
 
