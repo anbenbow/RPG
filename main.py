@@ -1,4 +1,3 @@
-from secrets import choice
 import my_hero
 import villain_one
 import villain_two

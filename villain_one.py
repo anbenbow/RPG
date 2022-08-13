@@ -1,4 +1,4 @@
-villian_one = {
+villain_one = {
     'name': 'Snow White',
     'level': 8,
     'health': 100,
