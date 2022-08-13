@@ -35,33 +35,40 @@ while villain_one.villian_one['health'] !=0:
     
     print_slow('\033[1;35;40m'+ random {my_hero.hero['challenges']})
     print('')
+    if user_attack == 0:
+        print_slow(f'{my_hero.hero['name']} has attacked {villain_one.villain_one['name']} with {my_hero.hero['attacks'][0][0]} and caused {my_hero.hero['attacks'][0][1]} damage!!')
+        print_slow(f'{villain_one.villian_one['name']} has {my_hero.hero['attacks'][0][1] - villain_one.villain_one['health']} remaining.')
+    if user_attack == 1:
+        print_slow(f'{my_hero.hero['name']} has attacked {villain_one.villain_one['name']} with {my_hero.hero['attacks'][1][0]} and caused {my_hero.hero['attacks'][1][1]} damage!!')
+        print_slow(f'{villain_one.villian_one['name']} has {my_hero.hero['attacks'][1][1] - villain_one.villain_one['health']} remaining.')
+    if user_attack == 2:
+        print_slow(f'{my_hero.hero['name']} has attacked {villain_one.villain_one['name']} with {my_hero.hero['attacks'][2][0]} and caused {my_hero.hero['attacks'][2][1]} damage!!')
+        print_slow(f'{villain_one.villian_one['name']} has {my_hero.hero['attacks'][2][1] - villain_one.villain_one['health']} remaining.')
+    if user_attack == 3:
+        print_slow(f'{my_hero.hero['name']} has attacked {villain_one.villain_one['name']} with {my_hero.hero['attacks'][3][0]} and caused {my_hero.hero['attacks'][3][1]} damage!!')    
+        print_slow(f'{villain_one.villian_one['name']} has {my_hero.hero['attacks'][3][1] - villain_one.villain_one['health']} remaining.')
+
     if villain_one.villian_one['health'] ==0:
         print_slow(f'{my_hero.hero['name']} HAS DEFEATED {villain_one.villain_one['name']}!! TIME TO LEVEL UP!')
 print('')
-
-if user_attack == 0:
-    print_slow(f'{my_hero.hero['name']} has attacked {villain_one.villain_one['name']} with {my_hero.hero['attacks'][0][0]} and caused {my_hero.hero['attacks'][0][1]} damage!!')
-    print_slow(f'{villain_one.villian_one['name']} has {my_hero.hero['attacks'][0][1] - villain_one.villain_one['health']} remaining.')
-if user_attack == 1:
-    print_slow(f'{my_hero.hero['name']} has attacked {villain_one.villain_one['name']} with {my_hero.hero['attacks'][1][0]} and caused {my_hero.hero['attacks'][1][1]} damage!!')
-    print_slow(f'{villain_one.villian_one['name']} has {my_hero.hero['attacks'][1][1] - villain_one.villain_one['health']} remaining.')
-if user_attack == 2:
-    print_slow(f'{my_hero.hero['name']} has attacked {villain_one.villain_one['name']} with {my_hero.hero['attacks'][2][0]} and caused {my_hero.hero['attacks'][2][1]} damage!!')
-    print_slow(f'{villain_one.villian_one['name']} has {my_hero.hero['attacks'][2][1] - villain_one.villain_one['health']} remaining.')
-if user_attack == 3:
-    print_slow(f'{my_hero.hero['name']} has attacked {villain_one.villain_one['name']} with {my_hero.hero['attacks'][3][0]} and caused {my_hero.hero['attacks'][3][1]} damage!!')    
-    print_slow(f'{villain_one.villian_one['name']} has {my_hero.hero['attacks'][3][1] - villain_one.villain_one['health']} remaining.')
+print_slow(f'\033[1;33;40m + Looted {villain_one.villian_one['coins']['copper']} copper coins!')
+print_slow(f'\033[1;33;40m + Looted {villain_one.villian_one['coins']['silver']} silver coins!')
+print_slow(f'\033[1;33;40m + Looted {villain_one.villian_one['coins']['gold']} gold coins!')
 print('')
-
-
-
-
-
+print_slow(f'{my_hero.hero['name']} now has {villain_one.villain_one['coins']['copper']+ my_hero.hero['coins']['copper']} copper, {villain_one.villain_one['coins']['silver']+ my_hero.hero['coins']['silver']} silver, and {villain_one.villain_one['coins']['gold']+ my_hero.hero['coins']['gold']} gold coins.')
 print('')
+print_slow(f'\033[1;33;40m + Added {villain_one.villian_one['equipment']} equipment!')
 print('')
+print_slow(f'{my_hero.hero['name']} has leveled up to level {my_hero.hero['level']+1}!')
 print('')
+print_slow(f'{my_hero.hero['name']} has gained a new attack!')
+user_new_attack = input('Please enter new attack: ')
 print('')
-print('')
+print(f'Added{user_new_attack} to {my_hero.hero['attacks']} with 100 damage.')  
+my_converted_attack_tuple = list(my_hero.hero['attacks'])
+my_converted_attack_tuple.append = user_new_attack, 100
+my_hero.hero['attacks'] = tuple(my_converted_attack_tuple)
+
 print('')
 print('')
 print('')
