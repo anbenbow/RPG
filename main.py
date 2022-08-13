@@ -79,11 +79,14 @@ while villain_one.villian_one['health'] !=0:
         print_slow(f'\033[1;33;40m + Looted {villain_one.villian_one['coins']['silver']} silver coins!')
         print_slow(f'\033[1;33;40m + Looted {villain_one.villian_one['coins']['gold']} gold coins!')
         print('')
-        print_slow(f'{my_hero.hero['name']} now has {villain_one.villain_one['coins']['copper']+ my_hero.hero['coins']['copper']} copper, {villain_one.villain_one['coins']['silver']+ my_hero.hero['coins']['silver']} silver, and {villain_one.villain_one['coins']['gold']+ my_hero.hero['coins']['gold']} gold coins.')
+        my_hero.hero['coins'] = my_hero.hero['coins']['copper']['silver']['gold']+villain_one.villian_one['coins']['copper']['silver']['gold']
+        print_slow(f'{my_hero.hero['name']} now has {myhero.hero['coins']['copper']',' +my_hero.hero['coins']['silver']} silver, and' +my_hero.hero['coins']['gold']} 'gold coins.')
         print('')
+        my_hero.hero['equipment'] = my_hero.hero['equipment'] + villain_one.villian_one['equipment']
         print_slow(f'\033[1;33;40m + Added {villain_one.villian_one['equipment']} equipment!')
         print('')
-        print_slow(f'{my_hero.hero['name']} has leveled up to level {my_hero.hero['level']+1}!')
+        my_hero.hero['level'] = my_hero.hero['level']+1
+        print_slow(f'{my_hero.hero['name']} has leveled up to level {my_hero.hero['level']}!')
         print('')
         print_slow(f'{my_hero.hero['name']} has gained a new attack!')
         user_new_attack = input('Please enter new attack: ')
@@ -92,6 +95,9 @@ while villain_one.villian_one['health'] !=0:
         my_converted_attack_tuple = list(my_hero.hero['attacks'])
         my_converted_attack_tuple.append = user_new_attack, 100
         my_hero.hero['attacks'] = tuple(my_converted_attack_tuple)
+
+
+
         print('')
 print('')
 print('')
@@ -156,11 +162,14 @@ while villain_two.villian_two['health'] !=0:
         print_slow(f'\033[1;33;40m + Looted {villain_two.villian_two['coins']['silver']} silver coins!')
         print_slow(f'\033[1;33;40m + Looted {villain_two.villian_two['coins']['gold']} gold coins!')
         print('')
-        print_slow(f'{my_hero.hero['name']} now has {villain_two.villain_two['coins']['copper']+ my_hero.hero['coins']['copper']} copper, {villain_two.villain_two['coins']['silver']+ my_hero.hero['coins']['silver']} silver, and {villain_two.villain_two['coins']['gold']+ my_hero.hero['coins']['gold']} gold coins.')
+        my_hero.hero['coins'] = my_hero.hero['coins']['copper']['silver']['gold']+villain_two.villian_two['coins']['copper']['silver']['gold']
+        print_slow(f'{my_hero.hero['name']} now has {myhero.hero['coins']['copper']',' +my_hero.hero['coins']['silver']} silver, and' +my_hero.hero['coins']['gold']} 'gold coins.')
         print('')
+        my_hero.hero['equipment'] = my_hero.hero['equipment'] + villain_two.villian_two['equipment']
         print_slow(f'\033[1;33;40m + Added {villain_two.villian_two['equipment']} equipment!')
         print('')
-        print_slow(f'{my_hero.hero['name']} has leveled up to level {my_hero.hero['level']+1}!')
+        my_hero.hero['level'] = my_hero.hero['level']+1
+        print_slow(f'{my_hero.hero['name']} has leveled up to level {my_hero.hero['level']}!')
         print('')
         print_slow(f'{my_hero.hero['name']} has gained a new attack!')
         user_new_attack = input('Please enter new attack: ')
@@ -233,11 +242,14 @@ while villain_three.villian_three['health'] !=0:
         print_slow(f'\033[1;33;40m + Looted {villain_three.villian_three['coins']['silver']} silver coins!')
         print_slow(f'\033[1;33;40m + Looted {villain_three.villian_three['coins']['gold']} gold coins!')
         print('')
-        print_slow(f'{my_hero.hero['name']} now has {villain_three.villain_three['coins']['copper']+ my_hero.hero['coins']['copper']} copper, {villain_three.villain_three['coins']['silver']+ my_hero.hero['coins']['silver']} silver, and {villain_three.villain_three['coins']['gold']+ my_hero.hero['coins']['gold']} gold coins.')
+         my_hero.hero['coins'] = my_hero.hero['coins']['copper']['silver']['gold']+villain_three.villian_three['coins']['copper']['silver']['gold']
+        print_slow(f'{my_hero.hero['name']} now has {myhero.hero['coins']['copper']',' +my_hero.hero['coins']['silver'] 'silver, and ' +my_hero.hero['coins']['gold'] 'gold coins.')
         print('')
+        my_hero.hero['equipment'] = my_hero.hero['equipment'] + villain_three.villian_three['equipment']
         print_slow(f'\033[1;33;40m + Added {villain_three.villian_three['equipment']} equipment!')
         print('')
-        print_slow(f'{my_hero.hero['name']} has leveled up to level {my_hero.hero['level']+1}!')
+        my_hero.hero['level'] = my_hero.hero['level']+1
+        print_slow(f'{my_hero.hero['name']} has leveled up to level {my_hero.hero['level']}!')
         print('')
         print_slow(f'{my_hero.hero['name']} has gained a new attack!')
         user_new_attack = input('Please enter new attack: ')
