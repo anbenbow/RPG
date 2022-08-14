@@ -25,7 +25,8 @@ print_slow(f"Level: {villain_one.villain_one['level']} Health: {villain_one.vill
 print('')
 
 while villain_one.villain_one['health'] !=0:
-    print_slow(f"{villain_one.villain_one['name']} HAS ATTACKED {my_hero.hero['name']} with ' + random.choice(villain_one.villain_one['attacks'])'!!")
+    villain_one_random_attack = random.choice(villain_one.villain_one['attacks'])
+    print_slow(f"{villain_one.villain_one['name']} HAS ATTACKED {my_hero.hero['name']} with {villain_one_random_attack}!!")
     print('')
     print_slow("\033[1;31;40m'+ {villain_one.villain_one['name']}':" + random.choice(villain_one.villain_one['challenges']))
     print('')
@@ -108,7 +109,8 @@ print_slow(f"Level: {villain_two.villain_two['level']} Health: {villain_two.vill
 print('')
 
 while villain_two.villain_two['health'] !=0:
-    print_slow(f"{villain_two.villain_two['name']} HAS ATTACKED {my_hero.hero['name']} with ' + random.choice(villain_two.villain_two['attacks'])'!!")
+    villain_two_random_attack = random.choice(villain_two.villain_two['attacks'])
+    print_slow(f"{villain_two.villain_two['name']} HAS ATTACKED {my_hero.hero['name']} with {villain_two_random_attack}!!")
     print('')
     print_slow("\033[1;31;40m'+ {villain_two.villain_two['name']}':" + random.choice(villain_two.villain_two['challenges']))
     print('')
@@ -191,7 +193,8 @@ print_slow(f"Level: {villain_three.villain_three['level']} Health: {villain_thre
 print('')
 
 while villain_three.villain_three['health'] !=0:
-    print_slow(f"{villain_three.villain_three['name']} HAS ATTACKED {my_hero.hero['name']} with ' + random.choice(villain_three.villain_three['attacks'])'!!")
+    villain_three_random_attack = random.choice(villain_three.villain_three['attacks'])
+    print_slow(f"{villain_three.villain_three['name']} HAS ATTACKED {my_hero.hero['name']} with {villain_three_random_attack}!!")
     print('')
     print_slow("\033[1;31;40m'+ {villain_three.villain_three['name']}':" + random.choice(villain_three.villain_three['challenges']))
     print('')
